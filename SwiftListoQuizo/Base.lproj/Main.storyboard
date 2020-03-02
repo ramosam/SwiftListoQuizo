@@ -80,7 +80,8 @@
                     </view>
                     <connections>
                         <outlet property="background" destination="8bC-Xf-vdC" id="wjo-Ye-T3Z"/>
-                        <outlet property="quizPicker" destination="lXu-3k-zsQ" id="fdO-6W-vio"/>
+                        <outlet property="colorSegmentedButton" destination="pZu-vO-Mgn" id="7pr-z3-3qr"/>
+                        <outlet property="quizPicker" destination="lXu-3k-zsQ" id="Knp-BU-Oa8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

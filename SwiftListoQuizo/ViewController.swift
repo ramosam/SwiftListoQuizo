@@ -10,47 +10,65 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBOutlet weak var quizPicker: UIPickerView!
+    @IBOutlet var background: UIView!
     private let CATS = "Cats"
     private let DOGS = "Dogs"
     private let PLANTS = "Plants"
     private let GHOSTS = "Ghosts"
     private let quizChoices = ["Cats", "Dogs", "Plants", "Ghosts"]
+    private let COLOR = "color"
+    private let PICKER = "picker"
     private let defaultChoice = 0
+    private let colorChoices = [UIColor.white, UIColor.gray, UIColor.systemPink, UIColor.purple]
     
-    @IBOutlet var background: UIView!
     
-
+    @IBOutlet weak var quizPicker: UIPickerView!
+    @IBOutlet weak var colorSegmentedButton: UISegmentedControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if !UserDefaults.standard.bool(forKey: "defaultsSet") {
+            UserDefaults.standard.set(defaultChoice, forKey: COLOR)
+            
+            UserDefaults.standard.set(true, forKey: "defaultsSet")
+        }
+        let color = UserDefaults.standard.integer(forKey: COLOR)
+        colorSegmentedButton.selectedSegmentIndex = color
+        background.backgroundColor = colorChoices[color]
+        
+
         
     }
+    
+
     
     @IBAction func changeColorButton(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            background.backgroundColor = UIColor.white
+            background.backgroundColor = colorChoices[0]
+            UserDefaults.standard.set(0, forKey: COLOR)
         case 1:
-            background.backgroundColor = UIColor.gray
+            background.backgroundColor = colorChoices[1]
+            UserDefaults.standard.set(1, forKey: COLOR)
         case 2:
-            background.backgroundColor = UIColor.systemPink
+            background.backgroundColor = colorChoices[2]
+            UserDefaults.standard.set(2, forKey: COLOR)
         case 3:
-            background.backgroundColor = UIColor.purple
+            background.backgroundColor = colorChoices[3]
+            UserDefaults.standard.set(3, forKey: COLOR)
         default:
-            background.backgroundColor = UIColor.white
+            background.backgroundColor = colorChoices[0]
+            UserDefaults.standard.set(0, forKey: COLOR)
         }
         
     }
-    
+
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        // Save history to user defaults
-//        UserDefaults.standard.set(history, forKey: "history")
-        print("# \(quizPicker.selectedRow(inComponent: 0))")
         let qSet: QuestionSet
         switch quizPicker.selectedRow(inComponent: 0) {
         case 0:
