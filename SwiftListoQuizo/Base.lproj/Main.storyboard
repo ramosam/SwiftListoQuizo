@@ -150,6 +150,13 @@
                                     <action selector="dismissQuestionView:" destination="wrn-Tt-7Y8" eventType="touchUpInside" id="zlv-do-nDK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiB-xX-Gx5">
+                                <rect key="frame" x="88" y="131" width="154" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="rPu-61-YRq"/>
@@ -157,6 +164,7 @@
                     <navigationItem key="navigationItem" id="nKW-b7-itV"/>
                     <connections>
                         <outlet property="background" destination="AmU-Rh-CYe" id="v0z-sY-nyg"/>
+                        <outlet property="nameLabel" destination="IiB-xX-Gx5" id="Ew0-zK-GMZ"/>
                         <outlet property="questionAnswerLabel" destination="B9g-78-8tP" id="gRp-TM-A8M"/>
                         <outlet property="themeTitle" destination="h7z-Jw-M7P" id="8lo-kx-lE3"/>
                     </connections>

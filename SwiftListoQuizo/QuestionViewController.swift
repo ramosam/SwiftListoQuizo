@@ -13,6 +13,7 @@ import UIKit
 class QuestionViewController: UIViewController {
     
     @IBOutlet weak var themeTitle: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var questionAnswerLabel: UILabel!
     @IBOutlet weak var background: UIView!
     private let CURRENT_INDEX = "currentIndex"
@@ -30,11 +31,14 @@ class QuestionViewController: UIViewController {
             UserDefaults.standard.set(0, forKey: CURRENT_INDEX)
             
             UserDefaults.standard.set(true, forKey: "questionDefaults")
+            
         }
         background.backgroundColor = colorChoices[UserDefaults.standard.integer(forKey: "color")]
         themeTitle.text = set.theme
         questionAnswerLabel.text = set.questions[set.questionsIndex].isQuestionSide ? set.questions[set.questionsIndex].question :
             set.questions[set.questionsIndex].answer
+        let namePlaceholder = UserDefaults.standard.string(forKey: "name")
+        nameLabel.text = namePlaceholder == "" ? "" : namePlaceholder
     }
     
     @IBAction func moveBackQuestion(_ sender: Any) {

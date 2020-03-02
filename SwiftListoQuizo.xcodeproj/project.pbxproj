@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1037633F240DC35C00F70776 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1037633E240DC35C00F70776 /* Settings.bundle */; };
 		10C11B56240C8D950048CE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C11B55240C8D950048CE53 /* AppDelegate.swift */; };
 		10C11B58240C8D950048CE53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C11B57240C8D950048CE53 /* SceneDelegate.swift */; };
 		10C11B5A240C8D950048CE53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C11B59240C8D950048CE53 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1037633E240DC35C00F70776 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		10C11B52240C8D950048CE53 /* SwiftListoQuizo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftListoQuizo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C11B55240C8D950048CE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10C11B57240C8D950048CE53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				10C11B57240C8D950048CE53 /* SceneDelegate.swift */,
 				10C11B59240C8D950048CE53 /* ViewController.swift */,
 				10C11B69240C8FB90048CE53 /* QuestionViewController.swift */,
+				1037633E240DC35C00F70776 /* Settings.bundle */,
 				10C11B5B240C8D950048CE53 /* Main.storyboard */,
 				10C11B5E240C8D970048CE53 /* Assets.xcassets */,
 				10C11B60240C8D970048CE53 /* LaunchScreen.storyboard */,
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1037633F240DC35C00F70776 /* Settings.bundle in Resources */,
 				10C11B62240C8D970048CE53 /* LaunchScreen.storyboard in Resources */,
 				10C11B5F240C8D970048CE53 /* Assets.xcassets in Resources */,
 				10C11B5D240C8D950048CE53 /* Main.storyboard in Resources */,
