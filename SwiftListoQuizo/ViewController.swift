@@ -8,11 +8,59 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var quizPicker: UIPickerView!
+    private let CATS = "Cats"
+    private let DOGS = "Dogs"
+    private let PLANTS = "Plants"
+    private let GHOSTS = "Ghosts"
+    private let quizChoices = ["Cats", "Dogs", "Plants", "Ghosts"]
+    private let defaultChoice = 0
+    
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Save history to user defaults
+//        UserDefaults.standard.set(history, forKey: "history")
+        print("# \(quizPicker.selectedRow(inComponent: 0))")
+        let qSet: QuestionSet
+        switch quizPicker.selectedRow(inComponent: 0) {
+        case 0:
+            qSet = QuestionSet(qTheme: CATS)
+        case 1:
+            qSet = QuestionSet(qTheme: DOGS)
+        case 2:
+            qSet = QuestionSet(qTheme: PLANTS)
+        case 3:
+            qSet = QuestionSet(qTheme: GHOSTS)
+        default:
+            qSet = QuestionSet(qTheme: DOGS)
+        }
+        if let qVC = segue.destination as? QuestionViewController {
+            qVC.set = qSet
+        }
+        
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return quizChoices.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return quizChoices[row]
     }
 
 
