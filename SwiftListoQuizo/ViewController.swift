@@ -47,20 +47,25 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func changeColorButton(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            background.backgroundColor = colorChoices[0]
             UserDefaults.standard.set(0, forKey: COLOR)
+            background.backgroundColor = colorChoices[0]
+            
         case 1:
-            background.backgroundColor = colorChoices[1]
             UserDefaults.standard.set(1, forKey: COLOR)
+            background.backgroundColor = colorChoices[1]
+            
         case 2:
-            background.backgroundColor = colorChoices[2]
             UserDefaults.standard.set(2, forKey: COLOR)
+            background.backgroundColor = colorChoices[2]
+            
         case 3:
-            background.backgroundColor = colorChoices[3]
             UserDefaults.standard.set(3, forKey: COLOR)
+            background.backgroundColor = colorChoices[3]
+            
         default:
-            background.backgroundColor = colorChoices[0]
             UserDefaults.standard.set(0, forKey: COLOR)
+            background.backgroundColor = colorChoices[0]
+            
         }
         
     }

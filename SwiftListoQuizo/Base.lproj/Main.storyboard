@@ -156,6 +156,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nKW-b7-itV"/>
                     <connections>
+                        <outlet property="background" destination="AmU-Rh-CYe" id="v0z-sY-nyg"/>
                         <outlet property="questionAnswerLabel" destination="B9g-78-8tP" id="gRp-TM-A8M"/>
                         <outlet property="themeTitle" destination="h7z-Jw-M7P" id="8lo-kx-lE3"/>
                     </connections>
