@@ -50,6 +50,9 @@ class QuestionViewController: UIViewController {
         }
     }
     
-
+    @IBAction func dismissQuestionView(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
 }

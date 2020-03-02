@@ -18,6 +18,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     private let quizChoices = ["Cats", "Dogs", "Plants", "Ghosts"]
     private let defaultChoice = 0
     
+    @IBOutlet var background: UIView!
     
 
     
@@ -26,6 +27,24 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Do any additional setup after loading the view.
         
     }
+    
+    @IBAction func changeColorButton(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            background.backgroundColor = UIColor.white
+        case 1:
+            background.backgroundColor = UIColor.gray
+        case 2:
+            background.backgroundColor = UIColor.systemPink
+        case 3:
+            background.backgroundColor = UIColor.purple
+        default:
+            background.backgroundColor = UIColor.white
+        }
+        
+    }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
