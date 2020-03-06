@@ -27,11 +27,8 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         if !UserDefaults.standard.bool(forKey: "questionDefaults") {
-
             UserDefaults.standard.set(0, forKey: CURRENT_INDEX)
-            
             UserDefaults.standard.set(true, forKey: "questionDefaults")
-            
         }
         background.backgroundColor = colorChoices[UserDefaults.standard.integer(forKey: "color")]
         themeTitle.text = set.theme

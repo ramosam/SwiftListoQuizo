@@ -31,18 +31,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Do any additional setup after loading the view.
         if !UserDefaults.standard.bool(forKey: "defaultsSet") {
             UserDefaults.standard.set(defaultChoice, forKey: COLOR)
-            
             UserDefaults.standard.set(true, forKey: "defaultsSet")
         }
         let color = UserDefaults.standard.integer(forKey: COLOR)
         colorSegmentedButton.selectedSegmentIndex = color
         background.backgroundColor = colorChoices[color]
-        
-
-        
     }
-    
-
     
     @IBAction func changeColorButton(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
@@ -67,7 +61,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             background.backgroundColor = colorChoices[0]
             
         }
-        
     }
 
     
@@ -90,7 +83,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if let qVC = segue.destination as? QuestionViewController {
             qVC.set = qSet
         }
-        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
