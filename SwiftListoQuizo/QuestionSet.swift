@@ -104,7 +104,7 @@ func createDogQuestions() -> [Question] {
 
 func createPlantQuestions() -> [Question] {
     var questions = [Question]()
-    let q0 = Question(question: "What are some difference between True and False Dandelions?", answer: "Cat's Ear and Carolina False Dandelion have leafless solid, " +
+    let q0 = Question(question: "What are some differences between True and False Dandelions?", answer: "Cat's Ear and Carolina False Dandelion have leafless solid, " +
     "branching green stems with several blossoms. True dandelions have" +
     " leafless hollow usually beige-colored stems, and produce only one" +
     " blossom per flowering stem. Carolina False Dandelion has a leafy stem," +
