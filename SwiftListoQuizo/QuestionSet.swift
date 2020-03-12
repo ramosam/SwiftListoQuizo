@@ -69,9 +69,7 @@ func createCatQuestions() -> [Question] {
     let q1 = Question(question: "A group of kittens is called a ...?", answer: "Kindle, a word that’s used to describe a group of kittens " +
     "born to one mama cat. Meanwhile, a group of full-grown cats is called " +
     "a clowder. ")
-    let q2 = Question(question: "Black cats are considered lucky in at least which two countries?", answer: "In Great Britain and Japan, they’re perceived as auspicious. " +
-    "In the English Midlands, new brides are given black cats to bless their " +
-    "marriage, and the Japanese believe that black cats are good luck.")
+    let q2 = Question(question: "Black cats are considered lucky in at least which two countries?", answer: "In Great Britain and Japan, they’re perceived as auspicious. ")
     let q3 = Question(question: "What is the technical term for hairball?", answer: "Bezoar.")
     
     questions.append(q0)
@@ -90,9 +88,7 @@ func createDogQuestions() -> [Question] {
     let q1 = Question(question: "Why were Dachshunds bred?", answer: "Dachshunds were bred to fight badgers in their dens.")
     let q2 = Question(question: "What color are Dalmations when they're born?", answer: "Dalmatians are completely white at birth.")
     let q3 = Question(question: "How well can a dog really smell?", answer: "Dogs can smell about 1,000-10,000 times better than humans. While" +
-    " humans have 5 million smell-detecting cells, dogs have more than 220 million." +
-    " The part of the brain that interprets smell is also four times larger in dogs " +
-    "than in humans.")
+    " humans have 5 million smell-detecting cells, dogs have more than 220 million.")
     
     questions.append(q0)
     questions.append(q1)
@@ -104,22 +100,18 @@ func createDogQuestions() -> [Question] {
 
 func createPlantQuestions() -> [Question] {
     var questions = [Question]()
-    let q0 = Question(question: "What are some differences between True and False Dandelions?", answer: "Cat's Ear and Carolina False Dandelion have leafless solid, " +
+    let q0 = Question(question: "What are some differences between True and False Dandelions?", answer: "Cat's Ear and Carolina False Dandelion have solid, " +
     "branching green stems with several blossoms. True dandelions have" +
-    " leafless hollow usually beige-colored stems, and produce only one" +
-    " blossom per flowering stem. Carolina False Dandelion has a leafy stem," +
-    " and is also called Leafy Stem Dandelion.")
+    " leafless hollow beige-colored stems, and produce only one" +
+    " blossom per flowering stem. ")
     let q1 = Question(question: "Do luffa (loofah) sponges grow in the ocean?", answer: "Luffa (loofah) sponges don't come from the ocean." +
     " A luffa sponge is the ripened fruit of a plant in the gourd / cucumber family.")
     let q2 = Question(question: "What is mycorrhizae and why is it important?", answer: "Mycorrhizal fungi allow plants to draw more nutrients and water " +
     "from the soil. They also increase plant tolerance to different " +
-    "environmental stresses. Moreover, these fungi play a major role in soil" +
-    " aggregation process and stimulate microbial activity.")
+    "environmental stresses.")
     let q3 = Question(question: "How long does it take for a lemon to ripen?", answer: "They gradually mature and gain sweetness; in fact, the fruit may " +
     "take as long as nine months to ripen. Once the fruit is mature, it can be" +
-    " left on the tree for a few weeks, but it does not ripen more. So first off, " +
-    "the lemons may not be turning yellow because they have not been ripening on the" +
-    " tree long enough.")
+    " left on the tree for a few weeks, but it does not ripen more. ")
     
     questions.append(q0)
     questions.append(q1)
@@ -134,9 +126,7 @@ func createGhostQuestions() -> [Question] {
     let q0 = Question(question: "What percentage of Americans believe in the presence of ghosts?", answer: "Around half of the American population, in survey after survey, " +
     "say they believe in ghosts and hauntings. ")
     let q1 = Question(question: "Why are ghosts traditionally depicted in a white sheet?", answer: "Depicting ghosts in a white sheet may have come from the burial " +
-    "cloth placed around a dead body showing only the face. This stereotype image " +
-    "was exploited by hoaxers and Hollywood and used in iconic representations, " +
-    "making it widely known. ")
+    "cloth placed around a dead body showing only the face.")
     let q2 = Question(question: "What is a banshee?", answer: "A banshee is a female spirit in Irish mythology who heralds the death of a " +
     "family member, usually by wailing, shrieking, or keening.")
     let q3 = Question(question: "What are some indicators that your house is haunted?", answer: "Indicators:\n" +
